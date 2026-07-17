@@ -115,7 +115,7 @@ function VisualStyle() {
       try {
         if (!visualStyleRequestPromise) {
           visualStyleRequestPromise = fetch(
-            "http://127.0.0.1:8000/generate-visual-style",
+  `${import.meta.env.VITE_API_URL}/generate-visual-style`,
             {
               method: "POST",
               headers: {
