@@ -122,7 +122,7 @@ function Levels() {
       try {
         if (!levelRequestPromise) {
           levelRequestPromise = fetch(
-            "http://127.0.0.1:8000/generate-levels",
+  `${import.meta.env.VITE_API_URL}/generate-levels`,
             {
               method: "POST",
               headers: {
