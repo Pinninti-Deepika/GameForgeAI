@@ -40,7 +40,7 @@ function Home() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/generate-game",
+  `${import.meta.env.VITE_API_URL}/generate-game`,
         {
           method: "POST",
           headers: {
