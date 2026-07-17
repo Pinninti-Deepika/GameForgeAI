@@ -104,7 +104,7 @@ function Characters() {
         // If there is no request running, create one.
         if (!characterRequestPromise) {
           characterRequestPromise = fetch(
-            "http://127.0.0.1:8000/generate-characters",
+           `${import.meta.env.VITE_API_URL}/generate-characters`,
             {
               method: "POST",
               headers: {
