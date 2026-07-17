@@ -137,7 +137,7 @@ function Gameplay() {
       try {
         if (!gameplayRequestPromise) {
           gameplayRequestPromise = fetch(
-            "http://127.0.0.1:8000/generate-gameplay",
+  `${import.meta.env.VITE_API_URL}/generate-gameplay`,
             {
               method: "POST",
               headers: {
